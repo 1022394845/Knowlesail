@@ -1,0 +1,20 @@
+<template>
+  <div class="register-page min-h-screen bg-background flex items-center justify-center p-6">
+    <div class="text-center max-w-md w-full">
+      <var-icon name="account-plus" :size="80" color="var(--color-primary)" class="mb-6" />
+      <h1 class="text-3xl font-bold text-foreground mb-2">创建账号</h1>
+      <p class="text-secondary mb-8">加入学海智航</p>
+      <p class="text-sm text-tertiary">注册功能开发中...</p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+// 注册页面
+</script>
+
+<style scoped>
+.register-page {
+  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-surface) 100%);
+}
+</style>

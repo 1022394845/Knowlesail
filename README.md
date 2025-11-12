@@ -18,9 +18,10 @@ CurriculumView TodoView  HomeView KnowledgeView ProfileView
 - **Vue 3** + Composition API
 - **Vue Router** (需要添加)
 - **Pinia** (状态管理，需要添加)
-- **Vant 4** (移动端UI组件库)
+- **Varlet UI** (移动端UI组件库)
 - **Axios** (HTTP请求)
 - **Tailwind CSS**(响应式样式)
+- **Capacitor**(迁移多端)
 
 ### 📁 完整目录结构规划
 
@@ -224,7 +225,7 @@ src/
 - 学习数据统计（创建的笔记数、完成的清单量、笔记收获的点赞、社区贡献度）
 - 主题切换
 - 数据同步备份
-- 偏好设置
+- 偏好设置(主页AI的聊天风格等)
 
 ### 🚀 实施步骤建议
 
