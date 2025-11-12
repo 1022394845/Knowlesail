@@ -15,7 +15,9 @@ export async function sendMessageStream(
 
   try {
     const response = await fetch(
-      `${apiBaseURL}/mcp/api/v1/chat/sse?message=${encodeURIComponent(message)}`,
+      `${apiBaseURL}/mcp/api/v1/chat/sse?message=${encodeURIComponent(
+        message
+      )}`,
       {
         method: 'GET',
         headers: {
@@ -59,10 +61,7 @@ export async function sendMessageStream(
               const toolNames = data.tool_calls
                 .map(
                   (tc) =>
-                    tc?.function?.name ||
-                    tc?.custom?.name ||
-                    tc?.type ||
-                    '工具'
+                    tc?.function?.name || tc?.custom?.name || tc?.type || '工具'
                 )
                 .filter(Boolean)
               if (onToolCall) {
@@ -80,6 +79,9 @@ export async function sendMessageStream(
               accumulatedText += resultStr
               if (onToolResult) {
                 onToolResult(resultStr, accumulatedText)
+              }
+              if (onChunk) {
+                onChunk(resultStr, accumulatedText)
               }
             }
           } catch (e) {
