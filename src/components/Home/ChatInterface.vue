@@ -35,7 +35,7 @@
 
         <!-- 加载占位 -->
         <div v-if="isLoading" class="loading-placeholder">
-          <var-loading type="wave" :size="24" />
+          <var-loading type="wave"/>
           <span class="ml-2">AI 正在思考...</span>
         </div>
       </div>
